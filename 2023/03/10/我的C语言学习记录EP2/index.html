@@ -16,15 +16,15 @@
   <meta name="author" content="Shawn Xiao">
   <meta name="keywords" content="">
   
-    <meta name="description" content="数组与指针 数组名其实是数组第一个元素的地址如何用一个指针指向数组:123456char &#x3D; a[];char *p ;p &#x3D; a;&#x2F;&#x2F;上下两个语句等价p &#x3D; &amp;a[0]; 可以使用指针对数组进行间接访问当指针指向数组元素的时候,可以对指针变量进行加减运算,这样做的意义在于指向距离指针所在位置向前或向后的第n个元素123char a[] &#x3D; &quot;Acorn&quot;;char *">
+    <meta name="description" content="数组与指针 数组名其实是数组第一个元素的地址">
 <meta property="og:type" content="article">
 <meta property="og:title" content="我的C语言学习记录EP2">
 <meta property="og:url" content="http://example.com/2023/03/10/%E6%88%91%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95EP2/index.html">
 <meta property="og:site_name" content="Seafood-market">
-<meta property="og:description" content="数组与指针 数组名其实是数组第一个元素的地址如何用一个指针指向数组:123456char &#x3D; a[];char *p ;p &#x3D; a;&#x2F;&#x2F;上下两个语句等价p &#x3D; &amp;a[0]; 可以使用指针对数组进行间接访问当指针指向数组元素的时候,可以对指针变量进行加减运算,这样做的意义在于指向距离指针所在位置向前或向后的第n个元素123char a[] &#x3D; &quot;Acorn&quot;;char *">
+<meta property="og:description" content="数组与指针 数组名其实是数组第一个元素的地址">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-03-10T10:03:05.000Z">
-<meta property="article:modified_time" content="2023-03-10T10:03:57.041Z">
+<meta property="article:modified_time" content="2023-03-10T23:10:55.061Z">
 <meta property="article:author" content="Shawn Xiao">
 <meta property="article:tag" content="原创">
 <meta property="article:tag" content="[object Object]">
@@ -176,6 +176,18 @@
             </li>
           
         
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/ITF/">
+                <i class="iconfont icon-books"></i>
+                <span>ITF</span>
+              </a>
+            </li>
+          
+        
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
@@ -291,7 +303,8 @@
               <div class="markdown-body">
                 
                 <h2 id="数组与指针"><a href="#数组与指针" class="headerlink" title="数组与指针"></a>数组与指针</h2><ol>
-<li><strong>数组名</strong>其实是数组第一个元素的<strong>地址</strong><br>如何用一个指针指向数组:<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs C"><span class="hljs-type">char</span> = a[];<br><br><span class="hljs-type">char</span> *p ;<br>p = a;<br><span class="hljs-comment">//上下两个语句等价</span><br>p = &amp;a[<span class="hljs-number">0</span>];<br></code></pre></td></tr></table></figure></li>
+<li><strong>数组名</strong>其实是数组第一个元素的<strong>地址</strong><span id="more"></span>  
+如何用一个指针指向数组:<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs C"><span class="hljs-type">char</span> = a[];<br><br><span class="hljs-type">char</span> *p ;<br>p = a;<br><span class="hljs-comment">//上下两个语句等价</span><br>p = &amp;a[<span class="hljs-number">0</span>];<br></code></pre></td></tr></table></figure></li>
 <li>可以使用指针对数组进行间接访问<br>当指针指向数组元素的时候,可以对<strong>指针变量进行加减运算</strong>,这样做的意义在于<strong>指向距离指针所在位置向前或向后的第n个元素</strong><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs C"><span class="hljs-type">char</span> a[] = <span class="hljs-string">&quot;Acorn&quot;</span>;<br><span class="hljs-type">char</span> *pa = a;<br><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;*p = %c,*(p+1) = %c,*(p+2) = %c,&quot;</span>,*pa,*(pa+<span class="hljs-number">1</span>),*(pa+<span class="hljs-number">2</span>));<br></code></pre></td></tr></table></figure>
 结果:<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs C">*p = A,*(p+<span class="hljs-number">1</span>) = c,*(p+<span class="hljs-number">2</span>) = o<br></code></pre></td></tr></table></figure>
 值得注意的是<br><code>p+1</code>并不是简单的将地址加一,而是<em><strong>指向</strong></em>数组的下一个元素<br>特别的:<br>如果是<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs C"><span class="hljs-type">double</span> d[] = &#123;<span class="hljs-number">1.1</span>,<span class="hljs-number">2.2</span>,<span class="hljs-number">3.3</span>,<span class="hljs-number">4.4</span>,<span class="hljs-number">5.5</span>&#125;;<br><span class="hljs-type">double</span> *pd = d;<br></code></pre></td></tr></table></figure>

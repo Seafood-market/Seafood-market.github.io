@@ -18,7 +18,7 @@
   
     <meta name="description" content="Test">
 <meta property="og:type" content="website">
-<meta property="og:title" content="ITF SMP">
+<meta property="og:title" content="ITF.title">
 <meta property="og:url" content="http://example.com/ITF/index.html">
 <meta property="og:site_name" content="Seafood-market">
 <meta property="og:description" content="Test">
@@ -30,11 +30,17 @@
   
   
   
-  <title>ITF SMP - Seafood-market</title>
+  <title>ITF.title - Seafood-market</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
 
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
 
@@ -167,6 +173,18 @@
             </li>
           
         
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/ITF/">
+                <i class="iconfont icon-books"></i>
+                <span>ITF</span>
+              </a>
+            </li>
+          
+        
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
@@ -196,7 +214,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Icy Tropical Fish SMP 我的世界服务器"></span>
+            <span id="subtitle" data-typed-text="ITF.subtitle"></span>
           
         </div>
 
@@ -223,12 +241,71 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
-<article class="page-content">
-  <h1 id="Test"><a href="#Test" class="headerlink" title="Test"></a>Test</h1>
+<div class="text-center">
+  <div class="about-info">
+    <div class="about-name">Acorn</div>
+    <div class="about-intro">如果我成为标本,请把我埋进土里</div>
+    <div class="about-icons">
+      
+        
+        
+        
+        <a href=https://github.com/Seafood-market class="
+           hint--bottom hint--rounded"
+           aria-label=GitHub
+           target="_blank"
+        >
+          <i class="iconfont icon-github-fill" aria-hidden="true"></i>
+          
+        </a>
+      
+        
+        
+        
+        <a href=https://www.facebook.com/ class="
+           hint--bottom hint--rounded"
+           aria-label=facebook
+           target="_blank"
+        >
+          <i class="iconfont icon-facebook-fill" aria-hidden="true"></i>
+          
+        </a>
+      
+    </div>
+  </div>
+</div>
+
+<article class="about-content page-content mt-5">
+  <div class="markdown-body">
+    <h1 id="Test"><a href="#Test" class="headerlink" title="Test"></a>Test</h1>
+  </div>
+
+  
+</article>
+
+
+
+
 
   
 
-</article>
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
 
 
 
@@ -355,6 +432,59 @@
 
 
 
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
 
   <script  src="/js/local-search.js" ></script>
 
