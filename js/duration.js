@@ -5,7 +5,7 @@
     }
   
     // 计时起始时间，仿照格式自行修改
-    var start = Date.parse("2021-07-10T16:03:05");
+    var start = Date.parse("2023-03-10T20:00:00");
   
     function update() {
       var now = Date.now() + 250;
@@ -21,7 +21,7 @@
   
       document.getElementById(
         "website-duration"
-      ).innerHTML = `本站已运行 ${days} 天 ${hours} 小时 ${minutes} 分 ${seconds} 秒`;
+      ).innerHTML = `本站已悄悄运行 ${days} 天 ${hours} 小时 ${minutes} 分 ${seconds} 秒`;
     }
   
     update();
