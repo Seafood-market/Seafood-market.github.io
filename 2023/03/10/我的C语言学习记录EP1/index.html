@@ -106,7 +106,10 @@
 
 
   
-<meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Seafood-market" type="application/atom+xml">
+</head>
 
 
 <body>
@@ -256,7 +259,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          221 字
+          211 字
         
       </span>
     
@@ -323,7 +326,7 @@
 <li>指针变量中存放的地址指向的内存单元的数据类型;</li>
 <li>定义方法  <code>数据类型 *指针变量名</code></li>
 <li>获取某个变量地址的运算符:  <code>数据类型 *指针变量名 = &amp;变量名</code></li>
-<li>获取某个变量地址的运算符:  <code>数据类型 *指针变量名 = *变量名</code><br>举例:<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs C"><span class="hljs-type">char</span> *pa = &amp;a; <br><span class="hljs-type">int</span> *pb = &amp;f; <span class="hljs-comment">//取地址</span><br><br><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%c , %d\n&quot;</span> , *pa, *pb);<br></code></pre></td></tr></table></figure>
+<li>获取某个变量地址的运算符:  <code>数据类型 *指针变量名 = *变量名</code><br>举例:<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs C"><span class="hljs-type">char</span> *pa = &amp;a; <br><span class="hljs-type">int</span> *pb = &amp;f; <span class="hljs-comment">//取地址</span><br><br><span class="hljs-built_in">printf</span>(<span class="hljs-string">"%c , %d\n"</span> , *pa, *pb);<br></code></pre></td></tr></tbody></table></figure>
 <em><strong>一定要避免创建访问未初始化的”野指针”</strong></em></li>
 </ol>
 
